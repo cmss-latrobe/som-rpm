@@ -1,5 +1,5 @@
 # som-rpm
-Implementation of self-organizing map with relational perspective mapping (SOM-RPM).
+A MATLAB implementation of self-organizing map with relational perspective mapping (SOM-RPM).
 
 Version: 1.1
 
