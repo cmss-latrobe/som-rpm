@@ -10,6 +10,6 @@ Interactive documentation can be found [here](https://cmss-latrobe.github.io/som
 If you use this toolbox in your work, please cite the following:
 TBC
 
-# License
+# Licence
 This toolbox is distributed under a Attribution-NonCommercial-NoDerivatives 4.0 International license. 
-Please refer to the LICENSE file for more information.
+Please refer to the LICENCE file for more information.
