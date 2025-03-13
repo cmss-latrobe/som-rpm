@@ -189,14 +189,3 @@ td, th {
     flex: 1;
     text-align: center;
 }
-.wy-nav-content {
-    max-width: 1200px !important;
-}
-
-.wy-table-responsive table td, .wy-table-responsive table th {
-    white-space: normal !important;
-}
-
-.wy-table-responsive {
-    overflow : visible !important;
-}
