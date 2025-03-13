@@ -1,0 +1,10 @@
+# File types
+*.asv
+*.m~
+#Specific folders
+__pycache__/
+.vs/
+documentation/.vs/
+documentation/site/.vs/
+#Specific files
+case_study.mat

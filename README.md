@@ -1,0 +1,15 @@
+# som-rpm
+Implementation of self-organizing map with relational perspective mapping (SOM-RPM).
+
+Version: 1.1
+
+# Documentation
+Interactive documentation can be found [here](https://cmss-latrobe.github.io/som-rpm/).
+
+# Attribution
+If you use this toolbox in your work, please cite the following:
+TBC
+
+# License
+This toolbox is distributed under a Attribution-NonCommercial-NoDerivatives 4.0 International license. 
+Please refer to the LICENSE file for more information.

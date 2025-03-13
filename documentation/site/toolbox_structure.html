@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Toolbox Structure - SOM-RPM Toolbox</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Toolbox Structure";
+        var mkdocs_page_input_path = "toolbox_structure.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> SOM-RPM Toolbox
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="background_theory.html">Background Theory</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installing and using</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="toolbox_structure.html">Toolbox Structure</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#somrpmmodel-methods">SOMRPMModel Methods</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#fit_toroidal_som">fit_toroidal_som</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#fit_rpm">fit_rpm</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#select_similarity_map_roi">select_similarity_map_roi</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="usage_guidelines.html">Usage Guidelines</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="case_study.html">Case Study</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="faqs.html">FAQs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary of terms</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="attribution.html">Attribution</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="licence.html">Licence</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SOM-RPM Toolbox</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Toolbox Structure</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="toolbox-structure">Toolbox Structure</h1>
+<p>The SOM-RPM toolbox is built around a central <code>class</code>, called <code>SOMRPMModel</code>, which enables interactive analyses and data exploration using SOM-RPM. </p>
+<p>With this object-oriented design, almost of all of the functionality comes from direct interaction with instances of this <code>class</code>, which are called <code>objects</code>. For
+example, we can instantiate an object called <code>mdl</code> from the <code>SOMRPMModel</code> class like this:</p>
+<pre><code class="language-MATLAB">mdl = SOMRPMModel;
+</code></pre>
+<p>The <code>SOMRPMModel</code> class has <code>properties</code> and <code>methods</code>. The properties store all of the data associated with the model (e.g. the SOM model, RPM models, 
+hyperparameters etc.), while the methods act on these properties in some way. </p>
+<p>For example, the <code>fit_toroidal_som</code> method fits a SOM to the inputted data, with outputs stored as a <code>SOMModel</code> property in the <code>SOMRPMModel</code> object. 
+The <code>fit_rpm</code> method then uses the stored <code>SOMModel</code> to fit an RPM model, and so on.</p>
+<p>Briefly, the workflow consists of the following steps (explained in more detail in the <a href="case_study.html">case study</a>).</p>
+<ol>
+<li>
+<p>Instantiate a SOM-RPM model object </p>
+</li>
+<li>
+<p>Fit a toroidal SOM model using the <code>fit_toroidal_som</code> method</p>
+</li>
+<li>
+<p>Fit an RPM model to the toroidal SOM using the <code>fit_rpm</code> method</p>
+</li>
+<li>
+<p>Interact with the models using the following methods:</p>
+<p>a. <code>show_similarity_map</code></p>
+<p>b. <code>show_color_som</code></p>
+<p>c. <code>show_histogram_som</code></p>
+<p>d. <code>select_similarity_map_roi</code></p>
+<p>e. <code>get_roi_info</code></p>
+<p>f. <code>get_roi_pixel_data</code> </p>
+</li>
+</ol>
+<h2 id="somrpmmodel-methods">SOMRPMModel Methods</h2>
+<h3 id="fit_toroidal_som">fit_toroidal_som</h3>
+<p>This method fits a toroidal SOM to the data, assigning each pixel (or voxel) a neuron.
+Below is a table of inputs, possible values and default values. Inputs denoted with an * are optional. </p>
+<table>
+<thead>
+<tr>
+<th>Inputs</th>
+<th>Description</th>
+<th>Possible values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>X</td>
+<td>Hyperspectral data cube</td>
+<td>3D numeric array</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>nsize</td>
+<td>Number of neurons on each side of SOM</td>
+<td>Integer scalar greater than zero</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>epochs</td>
+<td>Number of training epochs</td>
+<td>Integer scalar greater than zero</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>topol*</td>
+<td>Neuron topology</td>
+<td>‘square’ or ‘hexagonal’</td>
+<td>‘hexagonal’</td>
+</tr>
+<tr>
+<td>training*</td>
+<td>Training algorithm</td>
+<td>‘batch’ or ‘online’</td>
+<td>'batch'</td>
+</tr>
+<tr>
+<td>use_gpu*</td>
+<td>Indicates whether to use GPU for computations</td>
+<td>Boolean (logical)</td>
+<td>false</td>
+</tr>
+<tr>
+<td>lr_max*</td>
+<td>Maximum (starting) learning rate</td>
+<td>Real scalar greater than zero</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>lr_min*</td>
+<td>Minimum (ending) learning rate</td>
+<td>Real scalar greater than zero and less than or equal to lr_max</td>
+<td>0.01</td>
+</tr>
+<tr>
+<td>lr_decay_func*</td>
+<td>Learning rate decay function</td>
+<td>'cosine' or 'linear'</td>
+<td>'cosine'</td>
+</tr>
+<tr>
+<td>neighbor_func*</td>
+<td>Neuron neighborhood function</td>
+<td>'gaussian' or 'triangle'</td>
+<td>'gaussian'</td>
+</tr>
+<tr>
+<td>sigma_max*</td>
+<td>Maximum (starting) sigma for neighborhood function</td>
+<td>Real scalar greater than zero and less than or equal to one</td>
+<td>0.2</td>
+</tr>
+<tr>
+<td>sigma_min*</td>
+<td>Minimum (ending) sigma for neighborhood function</td>
+<td>Real scalar greater than zero and less than or equal to sigma_max</td>
+<td>0.05</td>
+</tr>
+<tr>
+<td>sigma_decay_func*</td>
+<td>Decay function for sigma</td>
+<td>'cosine' or 'linear'</td>
+<td>'cosine'</td>
+</tr>
+<tr>
+<td>init*</td>
+<td>Weights initialisation method</td>
+<td>‘random’ or ‘pca’</td>
+<td>‘random’</td>
+</tr>
+<tr>
+<td>init_weights*</td>
+<td>Initial weights for the SOM neurons</td>
+<td>3D numeric array of size [nsize, nsize, size(X, 3)]</td>
+<td>[]</td>
+</tr>
+<tr>
+<td>shuffle_data*</td>
+<td>Controls whether to shuffle data during training</td>
+<td>Boolean (logical)</td>
+<td>false</td>
+</tr>
+<tr>
+<td>plot_metrics*</td>
+<td>Plot quality metrics after fitting</td>
+<td>Boolean (logical)</td>
+<td>true</td>
+</tr>
+<tr>
+<td>mask*</td>
+<td>Mask for hyperspectral data cube pixels</td>
+<td>Boolean (logical) matrix of size [size(X, 1), size(X, 2)] OR a Boolean (logical) vector of length size(X, 1)*size(X, 2)</td>
+<td>false(0)</td>
+</tr>
+<tr>
+<td>verbose*</td>
+<td>Verbosity of print statement updates</td>
+<td>Integer scalar either 0 (no updates), 1 (update every 10 epochs) or 2 (update every epoch)</td>
+<td>2</td>
+</tr>
+</tbody>
+</table>
+<p>The only output is the completed model mdl. The quantisation and topographic error are printed in the command window. Plots showing these metrics
+as a function of epochs are also created automatically.</p>
+<h3 id="fit_rpm">fit_rpm</h3>
+<p>This method applies the RPM algorithm to the trained SOM Model, colouring the SOM. 
+There are no required input arguments for fit_rpm, so the below table shows only the optional input arguments and the outputs. 
+In this case, the input arguments control both the RPM fitting and the resulting visualizations.</p>
+<table>
+<thead>
+<tr>
+<th>Inputs</th>
+<th>Description</th>
+<th>Possible values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>init_lr*</td>
+<td>Initial learning rate for 3D toroidal RPM</td>
+<td>Real scalar greater than zero</td>
+<td>0.1</td>
+</tr>
+<tr>
+<td>vanishing_rate*</td>
+<td>Vanishing rate for 3D toroidal RPM</td>
+<td>Real scalar greater than zero</td>
+<td>0.9999</td>
+</tr>
+<tr>
+<td>rigidity*</td>
+<td>Rigidity for RPM force calculations</td>
+<td>Real scalar in range [-1, ∞]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>metric*</td>
+<td>Distance metric for high-dimensional distances</td>
+<td>‘euclidean’, ‘mahalanobis’, ‘cityblock’, ‘cosine’, …</td>
+<td>'euclidean'</td>
+</tr>
+<tr>
+<td>n_iter*</td>
+<td>Maximum number of iterations for 3D toroidal RPM</td>
+<td>Integer greater than or equal to zero</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>n_rot*</td>
+<td>Number of rotations around 3D torus to try</td>
+<td>Integer greater than or equal to zero</td>
+<td>20</td>
+</tr>
+<tr>
+<td>patience*</td>
+<td>Stopping iteration patience for 3D toroidal RPM</td>
+<td>Integer greater than or equal to zero</td>
+<td>50</td>
+</tr>
+<tr>
+<td>flat_approx*</td>
+<td>Use a flat RPM initially to approximate the best solution</td>
+<td>Boolean (logical)</td>
+<td>true</td>
+</tr>
+<tr>
+<td>init_lr_flat*</td>
+<td>Initial learning rate for flat RPM</td>
+<td>Real scalar greater than or equal to zero</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>vanishing_rate_flat*</td>
+<td>Vanishing rate for flat RPM</td>
+<td>Real scalar greater than or equal to zero</td>
+<td>0.9999</td>
+</tr>
+<tr>
+<td>n_iter_flat*</td>
+<td>Maximum number of iterations for flat RPM</td>
+<td>Integer greater than or equal to zero</td>
+<td>10000</td>
+</tr>
+<tr>
+<td>patience_flat*</td>
+<td>Stopping iteration patience for flat RPM</td>
+<td>Integer greater than or equal to zero</td>
+<td>10</td>
+</tr>
+</tbody>
+</table>
+<p>This again outputs the completed model mdl as well as 3-4 figures depending on your settings. 
+In this case, the outputted <code>SOMRPMModel</code> will contain the trained RPM model. Where a <code>SOMRPMModel</code> object can only contain a single SOM, 
+it can contain infinitely many RPM models with different rigidities.</p>
+<h3 id="select_similarity_map_roi">select_similarity_map_roi</h3>
+<p>This method is used to select regions of interest either for background removal or for investigation of hyperspectral data. </p>
+<table>
+<thead>
+<tr>
+<th>Inputs</th>
+<th>Description</th>
+<th>Possible values</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>roi_name</td>
+<td>Name of the region of interest (ROI)</td>
+<td>String</td>
+<td>NA</td>
+</tr>
+<tr>
+<td>rigidity*</td>
+<td>Rigidity used for RPM model</td>
+<td>Real scalar in range [-1, ∞]</td>
+<td>0</td>
+</tr>
+<tr>
+<td>n_roi*</td>
+<td>Number of ROIs to draw</td>
+<td>Integer greater than or equal to zero</td>
+<td>1</td>
+</tr>
+<tr>
+<td>roi_type*</td>
+<td>Type of ROI, either similar or selection</td>
+<td>'similar' or 'selection'</td>
+<td>'similar'</td>
+</tr>
+<tr>
+<td>draw_shape*</td>
+<td>Shape of ROI to draw</td>
+<td>‘Polygon’, ‘Circle’, ‘Freehand’, ‘Rectangle’, …</td>
+<td>'Polygon'</td>
+</tr>
+<tr>
+<td>top_p*</td>
+<td>Cumulative pixel fraction to select</td>
+<td>Real scalar in range [0, 1]</td>
+<td>1</td>
+</tr>
+<tr>
+<td>dist_threshold*</td>
+<td>Distance threshold when using similar roi_type</td>
+<td>Real scalar greater than or equal to zero</td>
+<td>0</td>
+</tr>
+<tr>
+<td>invert_selection*</td>
+<td>Flag to invert the drawn ROI mask</td>
+<td>Boolean (logical)</td>
+<td>false</td>
+</tr>
+<tr>
+<td>color_scheme*</td>
+<td>Color scheme to use for visualisation</td>
+<td>'cielab' or 'rgb'</td>
+<td>'cielab'</td>
+</tr>
+<tr>
+<td>cmap*</td>
+<td>Colormap to use for histogram SOM</td>
+<td>‘parula’, ‘turbo’, ‘hsv’, ‘hot’, ‘cool’, ‘spring’, … or 2D numeric RGB array</td>
+<td>'gray' (inverted)</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="getting_started.html" class="btn btn-neutral float-left" title="Installing and using"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="usage_guidelines.html" class="btn btn-neutral float-right" title="Usage Guidelines">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="getting_started.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="usage_guidelines.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

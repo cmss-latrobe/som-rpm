@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Background Theory - SOM-RPM Toolbox</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Background Theory";
+        var mkdocs_page_input_path = "background_theory.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="index.html" class="icon icon-home"> SOM-RPM Toolbox
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="index.html">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="background_theory.html">Background Theory</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#som">SOM</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#batch-vs-online-training">Batch vs Online training</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#learning-rate-decay-function">Learning rate decay function</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#neuron-neighborhood-function">Neuron neighborhood function</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#som-evaluation-metrics">SOM Evaluation Metrics</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#quantisation-error">Quantisation Error</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#topographic-error">Topographic Error</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#rpm">RPM</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="getting_started.html">Installing and using</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="toolbox_structure.html">Toolbox Structure</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="usage_guidelines.html">Usage Guidelines</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="case_study.html">Case Study</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="faqs.html">FAQs</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="glossary.html">Glossary of terms</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="attribution.html">Attribution</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="changelog.html">Changelog</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="licence.html">Licence</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">SOM-RPM Toolbox</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html" class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Background Theory</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="background-theory">Background Theory</h1>
+<p>For a comprehensive description of the background theory underpinning SOM-RPM, please refer to the <a href="DUMMY_LINK">paper associated
+with the release of this toolbox</a>. For a condensed version, please see below.</p>
+<p>The self-organizing map (SOM) creates a low-dimensional topology-preserving model of high-dimensional data, revealing the way
+in which data points are arranged in high-dimensional space. This toolbox is an implementation of the SOM combined with a secondary
+algorithm, called the relational perspective map (RPM), which together form self-organizing map with relational perspective mapping (SOM-RPM).</p>
+<h2 id="som">SOM</h2>
+<p>Given a data set comprising <span class="arithmatex">\(p\)</span> features, the SOM learns the weights for a set of <span class="arithmatex">\(N\)</span> neurons, <span class="arithmatex">\(\mathcal{N}=\{n_1,n_2,…,n_N\}\)</span> (with the weights matrix given by 
+<span class="arithmatex">\(\textbf{W}∈\mathbb{R}^{N×p}\)</span>), to model data topology. The result is a 2D grid of neurons whose topological relationships model the high-dimensional data topology,
+through a combination of the neuron positions in the grid and their weight vectors.</p>
+<h4 id="batch-vs-online-training">Batch vs Online training</h4>
+<p>The SOM can be fit using either batch of online training. Briefly, batch training updates neuron weights by considering all data points simultaneously, whereas online
+training involves passing each data point to the neurons sequentially. In general, batch training is much more efficient and, given that this toolbox is intended for
+hyperspectral data with many samples (pixels), this is the default and highly recommended training mode.</p>
+<p>In either case, neuron weights are updated based on a distance function, <span class="arithmatex">\(d(n_r,n_{BMU})\)</span>, which determines the distance between each neuron, <span class="arithmatex">\(n_r\)</span>, and the best matching unit (BMU), <span class="arithmatex">\(n_{BMU}\)</span>,
+for a given data point. The BMU is the neuron whose weight vector is closest (typically based on Euclidean distance) to the data point vector. In our implementation, we use
+the Euclidean distance between neurons on the grid as a distance measure, with toroidal topology. The toroidal topology ensures that edge effects are mitigated during training.
+For more information about these fundamental aspects of the SOM, we strongly suggest referring to our <a href="DUMMY_LINK">paper</a> and the broader SOM literature.</p>
+<h4 id="learning-rate-decay-function">Learning rate decay function</h4>
+<p>When using online training mode, the toolbox allows specification of a learning rate decay (batch training mode does not use a learning rate).</p>
+<p>The two options for this decay provided are cosine (default) and linear decay. For the cosine decay, the learning rate at epoch t is given by EQ1 and linear decay it is given by EQ2</p>
+<p><span class="arithmatex">\(\eta(t) = \frac{1}{2} \cdot (\eta_{max} - \eta_{min}) \cdot (1 + \cos (\frac{t}{t_{max}}\pi))+ \eta_{min}\)</span><span style="float:right;">EQ1</span></p>
+<p><span class="arithmatex">\(\eta(t) = (\eta_{max} - \eta_{min}) \ast (1- \frac{t}{t_{max}}) + \eta_{min}\)</span><span style="float:right;">EQ2</span></p>
+<p>where <span class="arithmatex">\(\eta_{max}\)</span> and <span class="arithmatex">\(\eta_{min}\)</span> are the maximum and minimum learning rates, respectively, and <span class="arithmatex">\(t\)</span> and <span class="arithmatex">\(t_{max}\)</span> are the current and 
+maximum epochs, respectively.</p>
+<h4 id="neuron-neighborhood-function">Neuron neighborhood function</h4>
+<p>In order for the SOM to self-organize, it is necessary to use a neighborhood function in addition to the distance
+function described earlier. This function is responsible for determining how neurons close to the BMU are updated at each epoch.</p>
+<p>Two common functions are Gaussian and triangle, which are the two options currently provided in the toolbox. </p>
+<p>The Gaussian (EQ3) and the triangle (EQ4) neighborhood functions are given by</p>
+<p><span class="arithmatex">\(u(n_r,n_{BMU},t) = \exp(-\frac{d(n_r,n_{BMU})^2}{2\sigma(t)^2})\)</span>       <span style="float:right;">EQ3</span></p>
+<p><span class="arithmatex">\(u(n_r,n_{BMU},t) = \mbox{max} (0,1 - \frac{d(n_r,n_{BMU})}{\sigma(t)})\)</span> <span style="float:right;">EQ4</span></p>
+<p>where <span class="arithmatex">\(n_r\)</span>, <span class="arithmatex">\(n_{BMU}\)</span>, <span class="arithmatex">\(t\)</span> and and <span class="arithmatex">\(d(n_r,n_{BMU})\)</span> are defined as before. The function <span class="arithmatex">\(\sigma(t)\)</span> is the 
+neighborhood radius, which decays with respect to <span class="arithmatex">\(t\)</span> (both cosine and linear decay are options in the toolbox, as 
+for the learning rate). This decay is a key component of the SOM algorithm, resulting in increased focus on 
+neurons closer to the BMU as training progresses.</p>
+<p>Intuitively, both neighborhood functions cause neurons that are close to the BMU to be adjusted more heavily than those that
+are further away on the SOM. This controls how the SOM self-organizes into a topological model of the data.</p>
+<h2 id="som-evaluation-metrics">SOM Evaluation Metrics</h2>
+<p>The toolbox currently automatically calculates two commonly applied metrics to evaluate SOM fit quality: quantization error, <span class="arithmatex">\(QE\)</span>, and 
+topographic error, <span class="arithmatex">\(TE\)</span>. </p>
+<p>The hyperparameters of the SOM can be adjusted to favour either <span class="arithmatex">\(QE\)</span> or <span class="arithmatex">\(TE\)</span>, by trading off fine-grained fitting 
+(low <span class="arithmatex">\(QE\)</span>) with better topology preservation (low <span class="arithmatex">\(TE\)</span>).</p>
+<h3 id="quantisation-error">Quantisation Error</h3>
+<p><span class="arithmatex">\(QE\)</span> measures how close each data point is to its BMU, with smaller values indicating a better fit. Mathematically, it is given by </p>
+<p><span class="arithmatex">\(QE = \frac{1}{m} \sum^m_{i=1} \big\| \textbf{w}_{BMU} - \textbf{x}_i \big\|\)</span>  <span style="float:right;">EQ5</span></p>
+<p>where <span class="arithmatex">\(\textbf{w}_{BMU}\)</span> is the weight vector associated with the BMU for the i-th data point, <span class="arithmatex">\(\textbf{x}_i\)</span>. 
+Note that the value of <span class="arithmatex">\(QE\)</span> cannot be used as an absolute indicator of quality, as it depends on the data set.</p>
+<h3 id="topographic-error">Topographic Error</h3>
+<p><span class="arithmatex">\(TE\)</span> is a measure of the local topology preservation of the SOM. Mathematically, it is given by </p>
+<p><span class="arithmatex">\(TE = \frac{1}{m} \sum^m_{i=1} \tau(\textbf{x}_i)\)</span> <span style="float:right;">EQ6</span></p>
+<p><span class="arithmatex">\(\tau (\textbf{x}) = \biggl\{^{0 \mbox{ if } n_{BMU} \mbox{ and } n_{SBMU} \mbox{ are neighbours on the SOM}}_{1 \mbox{ else}}\)</span> <span style="float:right;">EQ7</span></p>
+<p>where <span class="arithmatex">\(n_{BMU}\)</span> and <span class="arithmatex">\(n_{SBMU}\)</span> are the best-matching and second best-matching units (neurons), respectively. </p>
+<p>Intuitively, <span class="arithmatex">\(TE\)</span> applies an error if the two closest neurons to <span class="arithmatex">\(\textbf{x}_i\)</span> (based on Euclidean distance) are not neighbors, indicating a lack of local topology preservation.</p>
+<h2 id="rpm">RPM</h2>
+<p>The RPM algorithm is a non-linear dimensionality reduction (NLDR) algorithm designed to model high-dimensional distance information in a low-dimensional space.
+To do this, it takes as input a set of abstract data points <span class="arithmatex">\(\textbf{x}_i,i=1,2,…n,\)</span> with a distance matrix <span class="arithmatex">\(D^*\)</span> with corresponding distance elements <span class="arithmatex">\(d_{ij}^*,i,j=1,2,…,n\)</span>.
+These points are mapped by the RPM algorithm to a 2D map space <span class="arithmatex">\(t_i,i=1,2,…n,\)</span> with a new distance matrix <span class="arithmatex">\(D\)</span> 
+with elements <span class="arithmatex">\(d_{i,j},i,j=1,2,…,n\)</span>. RPM aims to preserve distance information by identifying a configuration 
+such that <span class="arithmatex">\(D\)</span> (in the 2D map space) is similar to <span class="arithmatex">\(D^*\)</span>.</p>
+<p>The RPM algorithm models the data points as a multiparticle system on a continuous toroidal surface. Each pair of particles <span class="arithmatex">\((i, j)\)</span> 
+experiences a symmetric repulsive force, determined by both <span class="arithmatex">\(d_{i,j}\)</span> and <span class="arithmatex">\(d_{i,j}^*\)</span>.</p>
+<p>Specifically, the pairwise particle force is given by </p>
+<p><span class="arithmatex">\(f_{i,j} = \frac{\delta E_p}{\delta d_{ij}} = -\frac{d_{ij}^*}{d^{p+1}_{ij}}\)</span> <span style="float:right;">EQ8</span></p>
+<p>where <span class="arithmatex">\(E_p\)</span> is the potential energy of the system and is defined by</p>
+<p><span class="arithmatex">\(E_p = \Biggl\{^{-\sum_{i&lt;j}d^*_{ij}\ln(d^*_{ij}), \mbox{ if }p=0}_{\sum_{i&lt;j}\frac{d^*_{ij}}{pd^*_{ij}}, \mbox{ else } }\)</span> <span style="float:right;">EQ9</span></p>
+<p>The rigidity, <span class="arithmatex">\(ρ\)</span>, is set by the user and determines whether the mapping is biased toward local 
+(larger values) or global (smaller values) distances. </p>
+<p>For our implementation of SOM-RPM for hyperspectral images, we apply the RPM algorithm to the neurons of a trained SOM. In this way, the topology of the neurons determines
+the starting coordinates of the low-dimensional RPM map, and their weight vectors are used for force calculations. Intuitively, the addition of RPM to the trained SOM incorporates
+distance information into the model to complement the topological information. Finally, a CIELAB color scheme is used to show the similarity between hyperspectral pixels 
+(based on the SOM-RPM model) using color.</p>
+<p>The descriptions above are very brief and intended only to give an overview of the theory underpinning SOM-RPM. We again emphasize that users should read our original
+<a href="https://doi.org/10.1021/acs.analchem.0c00986">SOM-RPM paper</a>, and the <a href="DUMMY_LINK">paper associated with the release of this toolbox</a>.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="index.html" class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="getting_started.html" class="btn btn-neutral float-right" title="Installing and using">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="index.html" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="getting_started.html" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="javascripts/mathjax.js"></script>
+      <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
