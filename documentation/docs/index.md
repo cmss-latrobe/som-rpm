@@ -1,4 +1,4 @@
-<div style="text-align: right"> Version: 1.1 </div>
+<div style="text-align: right"> Version: 1.2 </div>
 
 # Overview
 
@@ -20,7 +20,7 @@ SOM-RPM for exploratory analysis of their hyperspectral data.
 
 For more information about SOM-RPM, please refer to the original 
 [SOM-RPM paper](https://doi.org/10.1021/acs.analchem.0c00986), or to the [paper associated
-with the release of this toolbox](DUMMY_LINK).
+with the release of this toolbox](https://www.sciencedirect.com/science/article/pii/S0169743925000681).
 
 ## Documentation Layout
 
