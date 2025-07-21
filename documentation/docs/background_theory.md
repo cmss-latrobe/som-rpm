@@ -1,7 +1,7 @@
 # Background Theory
 
 For a comprehensive description of the background theory underpinning SOM-RPM, please refer to the [paper associated
-with the release of this toolbox](https://www.sciencedirect.com/science/article/pii/S0169743925000681). For a condensed version, please see below.
+with the release of this toolbox](https://doi.org/10.1016/j.chemolab.2025.105383). For a condensed version, please see below.
 
 The self-organizing map (SOM) creates a low-dimensional topology-preserving model of high-dimensional data, revealing the way
 in which data points are arranged in high-dimensional space. This toolbox is an implementation of the SOM combined with a secondary
@@ -22,7 +22,7 @@ hyperspectral data with many samples (pixels), this is the default and highly re
 In either case, neuron weights are updated based on a distance function, $d(n_r,n_{BMU})$, which determines the distance between each neuron, $n_r$, and the best matching unit (BMU), $n_{BMU}$,
 for a given data point. The BMU is the neuron whose weight vector is closest (typically based on Euclidean distance) to the data point vector. In our implementation, we use
 the Euclidean distance between neurons on the grid as a distance measure, with toroidal topology. The toroidal topology ensures that edge effects are mitigated during training.
-For more information about these fundamental aspects of the SOM, we strongly suggest referring to our [paper](https://www.sciencedirect.com/science/article/pii/S0169743925000681) and the broader SOM literature.
+For more information about these fundamental aspects of the SOM, we strongly suggest referring to our [paper](https://doi.org/10.1016/j.chemolab.2025.105383) and the broader SOM literature.
 
 
 #### Learning rate decay function
@@ -117,4 +117,4 @@ distance information into the model to complement the topological information. F
 (based on the SOM-RPM model) using color.
 
 The descriptions above are very brief and intended only to give an overview of the theory underpinning SOM-RPM. We again emphasize that users should read our original
-[SOM-RPM paper](https://doi.org/10.1021/acs.analchem.0c00986), and the [paper associated with the release of this toolbox](https://www.sciencedirect.com/science/article/pii/S0169743925000681).
+[SOM-RPM paper](https://doi.org/10.1021/acs.analchem.0c00986), and the [paper associated with the release of this toolbox](https://doi.org/10.1016/j.chemolab.2025.105383).

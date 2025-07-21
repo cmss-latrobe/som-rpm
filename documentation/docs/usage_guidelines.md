@@ -82,7 +82,7 @@ both options to identify which is best for your specific data set.
 One of the most influential optional arguments to consider when fitting a toroidal som is ```sigma_min```. 
 
 As the SOM fitting progresses, the neighborhood radius (used to update neuron weights) decreases. ```sigma_min```
-specifies the **minimum** radius. As we demonstrate briefly in [our paper](https://www.sciencedirect.com/science/article/pii/S0169743925000681), changing this hyperparameter
+specifies the **minimum** radius. As we demonstrate briefly in [our paper](https://doi.org/10.1016/j.chemolab.2025.105383), changing this hyperparameter
 controls the trade-off between quantization error and topographic error. Specifically, **increasing** ```sigma_min```
 will create more topologically accurate SOMs by restricting the freedom of individual neurons to move more closely
 to individual data points. Conversely, **decreasing** ```sigma_min``` will reduce the quantization error and therefore
