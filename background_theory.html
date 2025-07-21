@@ -133,7 +133,7 @@
             <div class="section" itemprop="articleBody">
               
                 <h1 id="background-theory">Background Theory</h1>
-<p>For a comprehensive description of the background theory underpinning SOM-RPM, please refer to the <a href="DUMMY_LINK">paper associated
+<p>For a comprehensive description of the background theory underpinning SOM-RPM, please refer to the <a href="https://www.sciencedirect.com/science/article/pii/S0169743925000681">paper associated
 with the release of this toolbox</a>. For a condensed version, please see below.</p>
 <p>The self-organizing map (SOM) creates a low-dimensional topology-preserving model of high-dimensional data, revealing the way
 in which data points are arranged in high-dimensional space. This toolbox is an implementation of the SOM combined with a secondary
@@ -149,7 +149,7 @@ hyperspectral data with many samples (pixels), this is the default and highly re
 <p>In either case, neuron weights are updated based on a distance function, <span class="arithmatex">\(d(n_r,n_{BMU})\)</span>, which determines the distance between each neuron, <span class="arithmatex">\(n_r\)</span>, and the best matching unit (BMU), <span class="arithmatex">\(n_{BMU}\)</span>,
 for a given data point. The BMU is the neuron whose weight vector is closest (typically based on Euclidean distance) to the data point vector. In our implementation, we use
 the Euclidean distance between neurons on the grid as a distance measure, with toroidal topology. The toroidal topology ensures that edge effects are mitigated during training.
-For more information about these fundamental aspects of the SOM, we strongly suggest referring to our <a href="DUMMY_LINK">paper</a> and the broader SOM literature.</p>
+For more information about these fundamental aspects of the SOM, we strongly suggest referring to our <a href="https://www.sciencedirect.com/science/article/pii/S0169743925000681">paper</a> and the broader SOM literature.</p>
 <h4 id="learning-rate-decay-function">Learning rate decay function</h4>
 <p>When using online training mode, the toolbox allows specification of a learning rate decay (batch training mode does not use a learning rate).</p>
 <p>The two options for this decay provided are cosine (default) and linear decay. For the cosine decay, the learning rate at epoch t is given by EQ1 and linear decay it is given by EQ2</p>
@@ -205,7 +205,7 @@ the starting coordinates of the low-dimensional RPM map, and their weight vector
 distance information into the model to complement the topological information. Finally, a CIELAB color scheme is used to show the similarity between hyperspectral pixels 
 (based on the SOM-RPM model) using color.</p>
 <p>The descriptions above are very brief and intended only to give an overview of the theory underpinning SOM-RPM. We again emphasize that users should read our original
-<a href="https://doi.org/10.1021/acs.analchem.0c00986">SOM-RPM paper</a>, and the <a href="DUMMY_LINK">paper associated with the release of this toolbox</a>.</p>
+<a href="https://doi.org/10.1021/acs.analchem.0c00986">SOM-RPM paper</a>, and the <a href="https://www.sciencedirect.com/science/article/pii/S0169743925000681">paper associated with the release of this toolbox</a>.</p>
               
             </div>
           </div><footer>
