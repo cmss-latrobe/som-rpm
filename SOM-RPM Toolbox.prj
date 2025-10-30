@@ -4,18 +4,18 @@
     <param.authnamewatermark>Centre for Materials and Surface Science</param.authnamewatermark>
     <param.email>cmss@latrobe.edu.au</param.email>
     <param.company>La Trobe University</param.company>
-    <param.summary />
+    <param.summary>Self-organizing map with relational perspective mapping (SOM-RPM) toolbox</param.summary>
     <param.description>Self-organizing map with relational perspective mapping (SOM-RPM) is an unsupervised machine lerning algorithm designed to model and visualise  both the topological and distance information in a hyperspectral data set. The SOM part of the algorithm is responsible for modelling topology, while RPM handles the modelling of distances.
 
 SOM-RPM was developed for hyperspectral data, specifically time-of-flight secondary ion mass spectrometry (ToF-SIMS) images and depth profiles. This toolbox is built around this use case with specifici functionality designed for interactive exploration of hyperspectral data.</param.description>
     <param.screenshot>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\toriod cie 20x20.jpg</param.screenshot>
-    <param.version>1.2</param.version>
+    <param.version>1.2.1</param.version>
     <param.output>${PROJECT_ROOT}\SOM-RPM Toolbox.mltbx</param.output>
     <param.products.name />
     <param.products.id />
     <param.products.version />
     <param.platforms />
-    <param.guid>7a86c89c-128b-4f80-8be9-27b51447ee9d</param.guid>
+    <param.guid>facf721f-7743-48cd-a359-56658f45881c</param.guid>
     <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
 % from packaging.  Excludes should be listed relative to the toolbox folder.
 % Some examples of how to specify excludes are provided below:
@@ -74,7 +74,6 @@ tlbx_ignore.txt
       <param.authnamewatermark />
       <param.email />
       <param.company />
-      <param.summary />
       <param.output />
       <param.products.name />
       <param.products.id />
@@ -111,6 +110,7 @@ tlbx_ignore.txt
     <fileset.rootfiles>
       <file>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\apply_pixel_ind.m</file>
       <file>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\color_som.m</file>
+      <file>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\Contents.m</file>
       <file>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\histogram_som.m</file>
       <file>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\LICENSE</file>
       <file>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\roi_pixel_data.m</file>

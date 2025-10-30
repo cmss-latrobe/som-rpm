@@ -7,8 +7,7 @@ Version: 1.1
 Interactive documentation can be found [here](https://cmss-latrobe.github.io/som-rpm/).
 
 # Attribution
-If you use this toolbox in your work, please cite the following:
-TBC
+If you use this toolbox in your work, please cite [this paper](https://doi.org/10.1016/j.chemolab.2025.105383).
 
 # Licence
 This toolbox is distributed under a Attribution-NonCommercial-NoDerivatives 4.0 International license. 
