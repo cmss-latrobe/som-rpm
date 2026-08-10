@@ -1,21 +1,20 @@
 <deployment-project plugin="plugin.toolbox" plugin-version="1.0">
-  <configuration file="D:\Wil Gardner\Code\Repos\cmss\som-rpm\SOM-RPM Toolbox.prj" location="D:\Wil Gardner\Code\Repos\cmss\som-rpm" name="SOM-RPM Toolbox" target="target.toolbox" target-name="Package Toolbox">
+  <configuration file="C:\Users\wgardner\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SOM-RPM Toolbox.prj" location="C:\Users\wgardner\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes" name="SOM-RPM Toolbox" target="target.toolbox" target-name="Package Toolbox">
     <param.appname>SOM-RPM Toolbox</param.appname>
     <param.authnamewatermark>Centre for Materials and Surface Science</param.authnamewatermark>
     <param.email>cmss@latrobe.edu.au</param.email>
     <param.company>La Trobe University</param.company>
     <param.summary>Self-organizing map with relational perspective mapping (SOM-RPM) toolbox</param.summary>
-    <param.description>Self-organizing map with relational perspective mapping (SOM-RPM) is an unsupervised machine lerning algorithm designed to model and visualise  both the topological and distance information in a hyperspectral data set. The SOM part of the algorithm is responsible for modelling topology, while RPM handles the modelling of distances.
-
-SOM-RPM was developed for hyperspectral data, specifically time-of-flight secondary ion mass spectrometry (ToF-SIMS) images and depth profiles. This toolbox is built around this use case with specifici functionality designed for interactive exploration of hyperspectral data.</param.description>
+    <param.description>Self-organizing map with relational perspective mapping (SOM-RPM) is an unsupervised machine learning algorithm designed to model and visualise both the topological and distance information in a hyperspectral data set. The SOM part of the algorithm is responsible for modelling topology, while RPM handles the modelling of distances.
+ SOM-RPM was developed for hyperspectral data, specifically time-of-flight secondary ion mass spectrometry (ToF-SIMS) images and depth profiles. This toolbox is built around this use case with specific functionality designed for interactive exploration of hyperspectral data.</param.description>
     <param.screenshot>D:\Wil Gardner\Code\Repos\cmss\private-som-rpm\toriod cie 20x20.jpg</param.screenshot>
-    <param.version>1.2.1</param.version>
+    <param.version>1.2.2</param.version>
     <param.output>${PROJECT_ROOT}\SOM-RPM Toolbox.mltbx</param.output>
     <param.products.name />
     <param.products.id />
     <param.products.version />
     <param.platforms />
-    <param.guid>facf721f-7743-48cd-a359-56658f45881c</param.guid>
+    <param.guid>15963c8e-890c-417d-84f2-06af5695abe1</param.guid>
     <param.exclude.filters>% List files contained in your toolbox folder that you would like to exclude
 % from packaging.  Excludes should be listed relative to the toolbox folder.
 % Some examples of how to specify excludes are provided below:
@@ -54,11 +53,15 @@ tlbx_ignore.txt
     <param.matlabpath.excludes />
     <param.javaclasspath.excludes />
     <param.exported.on.package>false</param.exported.on.package>
-    <param.required.addons />
+    <param.required.addons>
+      <requiredaddons>
+        <requiredAddOn downloadURL="" earliest="earliest" fromRepository="false" id="facf721f-7743-48cd-a359-56658f45881c" include="false" latest="latest">SOM-RPM Toolbox</requiredAddOn>
+      </requiredaddons>
+    </param.required.addons>
     <param.matlab.project.id />
     <param.matlab.project.name />
-    <param.release.start>R2019b</param.release.start>
-    <param.release.end>latest</param.release.end>
+    <param.release.start />
+    <param.release.end />
     <param.release.current.only>false</param.release.current.only>
     <param.compatiblity.windows>true</param.compatiblity.windows>
     <param.compatiblity.macos>true</param.compatiblity.macos>
@@ -89,9 +92,10 @@ tlbx_ignore.txt
       <param.matlabpath.excludes />
       <param.javaclasspath.excludes />
       <param.exported.on.package />
-      <param.required.addons />
       <param.matlab.project.id />
       <param.matlab.project.name />
+      <param.release.start />
+      <param.release.end />
       <param.release.current.only />
       <param.compatiblity.windows />
       <param.compatiblity.macos />
@@ -126,12 +130,19 @@ tlbx_ignore.txt
     <fileset.depfun.excluded />
     <fileset.package />
     <build-deliverables>
-      <file location="${PROJECT_ROOT}" name="SOM-RPM Toolbox.mltbx" optional="false">D:\Wil Gardner\Code\Repos\cmss\som-rpm\SOM-RPM Toolbox.mltbx</file>
+      <file location="${PROJECT_ROOT}" name="SOM-RPM Toolbox.mltbx" optional="false">C:\Users\wgardner\AppData\Roaming\MathWorks\MATLAB Add-Ons\Toolboxes\SOM-RPM Toolbox.mltbx</file>
     </build-deliverables>
     <workflow />
     <matlab>
-      <root>C:\Program Files\MATLAB\R2023b</root>
-      <toolboxes />
+      <root>C:\Program Files\MATLAB\R2024b</root>
+      <toolboxes>
+        <toolbox name="neuralnetwork" />
+      </toolboxes>
+      <toolbox>
+        <neuralnetwork>
+          <enabled>true</enabled>
+        </neuralnetwork>
+      </toolbox>
     </matlab>
     <platform>
       <unix>false</unix>
