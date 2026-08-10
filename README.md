@@ -1,7 +1,7 @@
 # som-rpm
 A MATLAB implementation of self-organizing map with relational perspective mapping (SOM-RPM).
 
-Version: 1.2.1
+Version: 1.2.3
 
 # Documentation
 Interactive documentation can be found [here](https://cmss-latrobe.github.io/som-rpm/).
